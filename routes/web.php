@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/about', function () {
+    $name = 'Arif Saifunnasrullah';
+    return view('about', ['name' => $name]);
+});
