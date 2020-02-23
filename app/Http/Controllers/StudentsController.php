@@ -44,12 +44,14 @@ class StudentsController extends Controller
 
         // $student->save();
 
-        Student::create([
-            'name' => $request->name,
-            'nim' => $request->nim,
-            'email' => $request->email,
-            'jurusan' => $request->jurusan
-        ]);
+        // Student::create([
+        //     'name' => $request->name,
+        //     'nim' => $request->nim,
+        //     'email' => $request->email,
+        //     'jurusan' => $request->jurusan
+        // ]);
+
+        Student::create($request->all());
 
         return redirect('/students');
     }
