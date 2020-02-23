@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-6">
             <h3 class="mt-3">Form Tambah Data Mahasiswa</h3>
-            <form action="/students/store" method="post">
+            <form action="/students" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="name">Name</label>

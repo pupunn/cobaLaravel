@@ -37,7 +37,7 @@ class StudentsController extends Controller
     public function store(Request $request)
     {
         $student = new Student;
-        $student->nama = $request->nama;
+        $student->name = $request->name;
         $student->nim = $request->nim;
         $student->email = $request->email;
         $student->jurusan = $request->jurusan;
