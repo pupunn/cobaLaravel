@@ -51,6 +51,13 @@ class StudentsController extends Controller
         //     'jurusan' => $request->jurusan
         // ]);
 
+        $request->validate([
+            'name' => 'required',
+            'nim' => 'required|size:10',
+            'email' => 'required|email:rfc,dns',
+            'jurusan' => 'required'
+        ]);
+
         Student::create($request->all());
         return redirect('/students')->with('status', 'Data mahasiswa berhasil ditambahkan!');
     }
